@@ -1,0 +1,69 @@
+Index: .idea/codeStyleSettings.xml
+===================================================================
+--- .idea/codeStyleSettings.xml	(date 1487080633000)
++++ .idea/codeStyleSettings.xml	(date 1487080633000)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectCodeStyleSettingsManager">
+-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default (3)" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/dictionaries/Ashish_Kumar_Satyam.xml
+===================================================================
+--- .idea/dictionaries/Ashish_Kumar_Satyam.xml	(date 1487080633000)
++++ .idea/dictionaries/Ashish_Kumar_Satyam.xml	(date 1487080633000)
+@@ -1,17 +0,0 @@
+-<component name="ProjectDictionaryState">
+-  <dictionary name="Ashish Kumar Satyam">
+-    <words>
+-      <w>desp</w>
+-      <w>gmail</w>
+-      <w>inte</w>
+-      <w>listview</w>
+-      <w>mcontact</w>
+-      <w>mfull</w>
+-      <w>muser</w>
+-      <w>passusername</w>
+-      <w>radiobtn</w>
+-      <w>vishal</w>
+-      <w>wishcumtrue</w>
+-    </words>
+-  </dictionary>
+-</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1487080633000)
++++ .idea/misc.xml	(revision )
+@@ -59,6 +59,9 @@
+   <component name="ProjectType">
+     <option name="id" value="Android" />
+   </component>
++  <component name="SvnConfiguration">
++    <configuration>C:\Users\Ashish Kumar Satyam\AppData\Roaming\Subversion</configuration>
++  </component>
+   <component name="masterDetails">
+     <states>
+       <state key="ScopeChooserConfigurable.UI">
+\ No newline at end of file
+Index: app/src/main/java/com/example/sharma/wishlist/Display_wishlist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sharma/wishlist/Display_wishlist.java	(date 1487080633000)
++++ app/src/main/java/com/example/sharma/wishlist/Display_wishlist.java	(revision )
+@@ -34,7 +34,7 @@
+     ArrayAdapter adapter;
+     public static final String TAG_NAME = "wish_description";
+     private ArrayList<String> wish_description;
+-
++// Ashsih Kumar Satyam
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);

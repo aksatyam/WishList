@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Wishlist</string>
+    <string name="facebook_app_id">1803717836555793</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Home</string>
+    <string name="action_settings1">Gallery</string>
+    <string name="action_settings2">Exit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

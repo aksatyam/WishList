@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-10.0.1_31bfd6c994289897189e272ad1a0eb75bb01df40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.1_1887cce9f0e6eea47a57e12612bc565a9993a17d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ashish Kumar Satyam\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.4.0_278e8012b67a5387ca805045568c9eb4cb128b12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_eb6388034c8e1cd575409befacdd6c695da76138.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-10.0.1_bf7d29fb1c4d518a6c1419af81d6fa695f5c55dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ashish Kumar Satyam\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\glide-3.7.0_da257210a2448848e2dd65e1debe3adc3930c032.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_79d42dcb31f88e49f27d97e230febda13de740e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-10.0.1_14442953767ccdba8d23e257a2a71369b486da44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-10.0.1_6521baddc349d26ccf8392735406a1ac2db8c175.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-10.0.1_084970e2c47388253ad8e967a4bf76b7f93a8020.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_506f3b1afc156375f71bc488832a19ed54e22d19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ashish Kumar Satyam\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_0a3f595f05d593966619325e5958a4a62bb1b9b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.volley-volley-1.0.0_069631690b60edd1d6a9b6cf88aa1285b456fe76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.19.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c6047a34af07d6ec4e950ba1dc70ce23ac65ecaa">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-android-sdk-4.19.0_a13193da4e4dddde9e31e6fea55cfa28e0ec4abd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-10.0.1_e55397864c0061c3b4b718b023a40c513596fb45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-10.0.1_71a665b993346831c3491f37f97952bcd5a72b91.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.1_c4e7c12b5ee3d6bd24d881788fe17124d387b7bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-10.0.1_25a051ba79095870f027c016c807e8dc5cc0d86c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_b2fed6ad05b883230e287a483743c805c9e52b2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.0.0_400b42164d6a2fe142e274c5901bec384f3fcf1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.1_f23ac710dd2776718a391446cdb2b8f6dd411058.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-10.0.1_aad011ddc6420ea1b1b79c0ba68f8485904843ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_b99665049711028084c8737f4a993cc6a895f95e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_9299ab011f6a122c703a8ea7146124ae336e4ca3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.1_3a1cd3f96f0995571b01371dec842702e8367aa4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.1_b5b871ea477ff3d7f790c3777cc10769db5e6907.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_bca2056f15cd01f5ef6d974b711ba19139f54d77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.1_29bb05f7f5988d3a8c5531e58477ac1f11338047.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidApp\Wishlist\app\build\intermediates\exploded-aar\com.android.support\customtabs\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94ba691efc31bf53264db0716d9c9ec03843ea31">
+        <dex dex="D:\AndroidApp\Wishlist\app\build\intermediates\pre-dexed\debug\com.android.support-customtabs-25.0.0_2057d66c215ec781aebea265293df7a4b5333ea9.jar" />
+    </item>
+
+</items>
