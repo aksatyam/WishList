@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+/*import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;*/
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.Log;
@@ -123,13 +123,12 @@ public class MainPage extends AppCompatActivity
 
         getProfName.setText(sharedPreferences.getString("Name", "new user"));
         getProfEmail.setText(sharedPreferences.getString("Email", "sign In For More"));
-        // sharedPreferences.getString("Img_Url","Profile Pic");
+
 
         Glide.with(this).load(sharedPreferences.getString("Img_Url", "Profile Pic")).asBitmap().centerCrop().into(new BitmapImageViewTarget(getProfPic) {
             @Override
             protected void setResource(Bitmap resource) {
-                RoundedBitmapDrawable circularBitmapDrawable =
-                        RoundedBitmapDrawableFactory.create(getApplicationContext().getResources(), resource);
+                RoundedBitmapDrawable circularBitmapDrawable = RoundedBitmapDrawableFactory.create(getApplicationContext().getResources(), resource);
                 circularBitmapDrawable.setCircular(true);
                 getProfPic.setImageDrawable(circularBitmapDrawable);
             }

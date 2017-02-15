@@ -25,7 +25,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import static com.example.sharma.wishlist.R.id.activity_display_wishlist;
 
 public class Display_wishlist extends AppCompatActivity {
     final String Wish_URL = "https://loveneet30.000webhostapp.com/wishlist.php";
@@ -34,7 +33,7 @@ public class Display_wishlist extends AppCompatActivity {
     ArrayAdapter adapter;
     public static final String TAG_NAME = "wish_description";
     private ArrayList<String> wish_description;
-//Ashish
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
