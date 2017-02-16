@@ -1,28 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/activity_display_wishlist"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="com.example.sharma.wishlist.Display_wishlist">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_display_wishlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sharma.wishlist.Display_wishlist">
 
-    <TextView
-        android:id="@+id/view1"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Wist List"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_white_48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="WISH LISTS"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="90dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_pageview_white_48dp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
 
     <ListView
         android:id="@+id/listViewWish"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/view1"
-        android:layout_marginBottom="60dp"></ListView>
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="5dp" />
 
     <Button
         android:id="@+id/app_close"

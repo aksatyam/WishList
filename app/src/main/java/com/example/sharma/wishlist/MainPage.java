@@ -37,9 +37,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
-
-import org.w3c.dom.Text;
-
 import java.util.HashMap;
 import java.util.Map;
 

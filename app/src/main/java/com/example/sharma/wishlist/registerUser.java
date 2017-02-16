@@ -78,12 +78,12 @@ public class registerUser extends AppCompatActivity {
                         Log.d("DataBase Response", response);
                         if (response.equals("success")) {
                             loading.dismiss();
-                            Toast.makeText(registerUser.this, "User Registration :" + response, Toast.LENGTH_LONG).show();
+                            Toast.makeText(registerUser.this, "User Registration :  " + response, Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(registerUser.this, userSignIn.class);
                             startActivity(intent);
                         } else {
                             loading.dismiss();
-                            Toast.makeText(registerUser.this, "User Registration :" + response, Toast.LENGTH_LONG).show();
+                            Toast.makeText(registerUser.this, "User Registration :  " + response, Toast.LENGTH_LONG).show();
 
                         }
                     }
@@ -91,6 +91,7 @@ public class registerUser extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        loading.dismiss();
                         Toast.makeText(registerUser.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
