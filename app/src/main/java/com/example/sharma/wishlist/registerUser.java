@@ -63,13 +63,16 @@ public class registerUser extends AppCompatActivity {
     }
 
     public void registerNewUser() {
+        if(inValid()){
+            return;
+        }
         final String FullName = mfullName.getText().toString().trim();
         final String UserName = muserName.getText().toString().trim();
         final String uPassword = mPassword.getText().toString().trim();
         final String uEmail = mEmail.getText().toString().trim();
         final String uContactNo = mcontactNo.getText().toString().trim();
         final String uAddress = mAddress.getText().toString().trim();
-        final ProgressDialog loading = ProgressDialog.show(this, "Please Wait.....", "SignUp.......", false, false);
+        final ProgressDialog loading = ProgressDialog.show(this, "Please Wait.....", "Registering......", false, false);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
                 new Response.Listener<String>() {
@@ -78,12 +81,12 @@ public class registerUser extends AppCompatActivity {
                         Log.d("DataBase Response", response);
                         if (response.equals("success")) {
                             loading.dismiss();
-                            Toast.makeText(registerUser.this, "User Registration :  " + response, Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(registerUser.this, userSignIn.class);
+                            Toast.makeText(getApplicationContext(), "User Registration Success....", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(), userSignIn.class);
                             startActivity(intent);
                         } else {
                             loading.dismiss();
-                            Toast.makeText(registerUser.this, "User Registration :  " + response, Toast.LENGTH_LONG).show();
+                            Toast.makeText(registerUser.this, "User Registration Failed...", Toast.LENGTH_LONG).show();
 
                         }
                     }
@@ -111,6 +114,40 @@ public class registerUser extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+    public boolean inValid() {
+        String getfullname =  mfullName.getText().toString();
+        String getname = muserName.getText().toString();
+        String getpassword = mPassword .getText().toString();
+        String getemail = mEmail.getText().toString();
+        String getcontact = mcontactNo.getText().toString();
+        String getaddress = mAddress.getText().toString();
+
+        if (getfullname.isEmpty()) {
+            mfullName.setError("enter fullname");
+            return true;
+        }
+        if (getname.isEmpty()) {
+            muserName.setError("enter username");
+            return true;
+        }
+        if (getpassword.isEmpty()) {
+           mPassword.setError("enter password");
+            return true;
+        }
+        if (getemail.isEmpty()) {
+            mEmail.setError("enter email");
+            return true;
+        }
+        if (getcontact.isEmpty()) {
+            mcontactNo.setError("enter contact number");
+            return true;
+        }
+        if (getaddress.isEmpty()) {
+            mAddress.setError("enter contact number");
+            return true;
+        }
+        return false;
     }
 
 }

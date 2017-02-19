@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 /*import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;*/
+import android.support.design.widget.Snackbar;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.Log;
@@ -27,7 +28,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -37,6 +37,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,8 +55,14 @@ public class MainPage extends AppCompatActivity
     TextView getProfEmail;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    View view;
 
     private static final String REGISTER_URL = "https://loveneet30.000webhostapp.com/user_answer.php";
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
 
     @Override
@@ -130,6 +138,7 @@ public class MainPage extends AppCompatActivity
                 getProfPic.setImageDrawable(circularBitmapDrawable);
             }
         });
+
     }
 
     @Override
@@ -182,12 +191,16 @@ public class MainPage extends AppCompatActivity
             Intent intent = new Intent(MainPage.this, registerUser.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(MainPage.this, Display_wishlist.class);
+            Intent intent = new Intent(MainPage.this, frag_wishListHolder.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(MainPage.this, Profile.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(MainPage.this, wishlist.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 
@@ -202,6 +215,9 @@ public class MainPage extends AppCompatActivity
 
 
     public void registerUserMain() {
+        if (invalid()) {
+            return;
+        }
         final String uName;
         final String uMob;
         final String uDesc;
@@ -227,6 +243,7 @@ public class MainPage extends AppCompatActivity
         radiobtn2 = radioButton2.getText().toString();
         radiobtn3 = radioButton3.getText().toString();
 
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -234,22 +251,19 @@ public class MainPage extends AppCompatActivity
                         Log.d("Database_message", response);
 
                         if (response.equals("success")) {
-                            Toast.makeText(getApplicationContext(), "Good Successfully inserted", Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getApplicationContext(), "Good Successfully inserted", Toast.LENGTH_LONG).show();
+
+                            Snackbar.make(view, "Good Successfully inserted", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                             bundleSendUsername.putString("passusername", uName);
-                            Fragment fragment;
-                            fragment = new wish_list();
-                            fragment.setArguments(bundleSendUsername);
-                            FragmentManager fragmentManager = getFragmentManager();
-                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                            fragmentTransaction.add(R.id.content_main_page, fragment);
-                            fragmentTransaction.commit();
+                            startActivity(new Intent(MainPage.this,wishlist.class));
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainPage.this, error.toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(MainPage.this, error.toString(), Toast.LENGTH_LONG).show();
+                        Snackbar.make(view, error.toString(), Snackbar.LENGTH_LONG).setAction("Action", null).show();
                     }
                 }) {
             @Override
@@ -271,4 +285,31 @@ public class MainPage extends AppCompatActivity
         requestQueue.add(stringRequest);
 
     }
+
+    public boolean invalid() {
+        String radiobtn1 = radioButton1.getText().toString();
+        String radiobtn2 = radioButton2.getText().toString();
+        String radiobtn3 = radioButton3.getText().toString();
+        if (radiobtn1.matches("")) {
+            radioButton1.setError("Please Select one");
+            return true;
+        } else {
+            radioButton1.setError("");
+        }
+        if (radiobtn2.matches("")) {
+            radioButton2.setError("Please Select one");
+            return true;
+        } else {
+            radioButton2.setError("");
+        }
+        if (radiobtn3.matches("")) {
+            radioButton3.setError("Please Select one");
+            return true;
+        } else {
+            radioButton3.setError("");
+        }
+        return false;
+    }
+
+
 }

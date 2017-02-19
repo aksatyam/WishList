@@ -26,8 +26,8 @@
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center|center_horizontal"
-                android:text="Create Your Wish"
-                android:textColor="#000000"
+                android:text="Answer Few Questions"
+                android:textColor="#D50000"
                 android:textSize="25dp"
                 android:textStyle="bold"/>
 
@@ -222,6 +222,8 @@
                 android:layout_gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="NEXT"
+                android:textColor="#fff"
+                android:background="@color/colorAccent"
                 android:textSize="15dp"
                 android:textStyle="bold"/>
 

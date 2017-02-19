@@ -5,7 +5,7 @@
     android:id="@+id/activity_register_user"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFD8DC"
+    android:background="#f2e2cd"
     android:orientation="vertical"
     tools:context="com.example.sharma.wishlist.registerUser">
 
@@ -32,7 +32,7 @@
                 android:layout_height="50dp"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
-                android:text="UserSignUp"
+                android:text="SignUp"
                 android:textColor="#D50000"
                 android:textSize="30dp"
                 android:textStyle="bold" />
@@ -137,6 +137,8 @@
                 android:layout_marginRight="50dp"
                 android:text="SignUp"
                 android:textSize="20dp"
+                android:background="@color/colorAccent"
+                android:textColor="#fff"
                 android:textStyle="bold" />
 
             <TextView

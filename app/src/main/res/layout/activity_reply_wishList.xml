@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2e2cd"
+    android:orientation="vertical"
+    tools:context="com.example.sharma.wishlist.replyWishList">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="Wishlist"
+        app:titleTextColor="#fff" />
+
+
+    //user Replay
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/print_wish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:background="#e1c3c4"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/reply_message"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/message_reply"
+        android:inputType="textMultiLine"
+        android:textColor="#fff"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btn_Reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reply_message"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:text="Reply"
+        android:textColor="#fff" />
+
+</LinearLayout>

@@ -12,15 +12,20 @@
         android:theme="@style/AppTheme.NoActionBar">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-
             android:value="@string/facebook_app_id" />
 
         <activity
             android:name=".MainPage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
-        <activity android:name=".registerUser" >
+        <activity
+            android:name=".registerUser"
+            android:label="Registration Page"></activity>
+        <activity
+            android:name=".userSignIn"
+            android:label="Login Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +33,20 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".userSignIn" />
-        <activity android:name=".Display_wishlist"></activity>
+        <activity android:name=".frag_wishListHolder" />
+        <activity android:name=".Splash_screen"></activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".replyWishList">
+
+        </activity>
+        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>
