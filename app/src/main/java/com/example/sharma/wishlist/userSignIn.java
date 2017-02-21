@@ -1,8 +1,5 @@
 package com.example.sharma.wishlist;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,11 +23,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.bumptech.glide.Glide;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
@@ -43,6 +43,12 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,7 +57,10 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
     private Button btnSignInD;
     private LoginButton btnLogInF;
     private SignInButton btnSignInG;
+    private UserDetail userDetail;
     TextView redirectSignup;
+    Bundle bundle;
+    AccessTokenTracker accessTokenTracker;
 
     private static final String Login_URL = "https://loveneet30.000webhostapp.com/login.php";
 
@@ -70,6 +79,10 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_user_sign_in);
+
+        bundle=new Bundle();
+
+        userDetail=new UserDetail();
 
         edtUsernameL = (EditText) findViewById(R.id.edtUserName1);
         edtPasswordL = (EditText) findViewById(R.id.edtPassword1);
@@ -127,59 +140,100 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
     private void callWS(final View view) {
         if(inValid()){
             return;
-        }
-        final String Username = edtUsernameL.getText().toString();
-        final String password = edtPasswordL.getText().toString();
-        final ProgressDialog loading = ProgressDialog.show(this, "Please Wait....", "loggin In....", false, false);
-        StringRequest request = new StringRequest(Request.Method.POST, Login_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Log.d("Vishal","response"+response);
-                if (response.equals("success")) {
-                    loading.dismiss();
-                    Snackbar.make(view, "Login successfull", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                    Intent i = new Intent(userSignIn.this,MainPage.class);
-                    startActivity(i);
-                } else {
-                    loading.dismiss();
-                    Snackbar.make(view, "Fail to Login!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+        }else {
+            final String Username = edtUsernameL.getText().toString();
+            final String password = edtPasswordL.getText().toString();
+            final ProgressDialog loading = ProgressDialog.show(this, "Please Wait....", "loggin In....", false, false);
+            StringRequest request = new StringRequest(Request.Method.POST, Login_URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    Log.d("Vishal", "response" + response);
+                    if (response.equals("success")) {
+                        loading.dismiss();
+                        Snackbar.make(getCurrentFocus(), "Login successfull", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                        bundle.putString("uName",Username);
+                        userDetail.putName(bundle);
+                        Intent i = new Intent(userSignIn.this, MainPage.class);
+                        startActivity(i);
+                    } else {
+                        loading.dismiss();
+                        Snackbar.make(view, "Fail to Login!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                    }
+
+
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                }
+            }
+            ) {
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> map = new HashMap<>();
+                    map.put("username", Username);
+                    map.put("password", password);
+                    return map;
                 }
 
+            };
+            RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+            queue.add(request);
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
         }
-        ) {
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<>();
-                map.put("username", Username);
-                map.put("password", password);
-                return map;
-            }
-
-        };
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        queue.add(request);
-
-
-
-
     }
-
     private void callFB() {
         callbackManager = CallbackManager.Factory.create();
         Toast.makeText(userSignIn.this, "Facebook1", Toast.LENGTH_SHORT).show();
+        btnLogInF.setReadPermissions(Arrays.asList("public_profile, email, user_friends,read_custom_friendlists"));
 
         btnLogInF.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(userSignIn.this, "Facebook Login Success", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(userSignIn.this,MainPage.class));
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+                        try {
+                            String uId= object.getString("id");
+                            String uName= object.getString("name");
+                            String uEmail= object.getString("email");
+
+                            ArrayList fId= new ArrayList();
+                            ArrayList fName= new ArrayList();
+                            Toast.makeText(userSignIn.this, uName, Toast.LENGTH_SHORT).show();
+                            JSONObject jsonObject=object.getJSONObject("friends");
+                            JSONArray jsonArray= jsonObject.getJSONArray("data");
+                             for (int i=0; i<jsonArray.length();i++)
+                             {
+                                 JSONObject object1=jsonArray.getJSONObject(i);
+                                 fId.add(object1.getString("id"));
+                                 fName.add(object1.getString("name"));
+                             }
+                            SharedPrefFacebook.getInstance(userSignIn.this).saveFBInfo(uId,uName,uEmail);
+                            SharedPrefFacebook.getInstance(userSignIn.this).saveFacebookData(fId.toString(),fName.toString());
+                            startActivity(new Intent(userSignIn.this,MainPage.class));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                Bundle bundle=new Bundle();
+                bundle.putString("fields","id,name,email,friends");
+                request.setParameters(bundle);
+                request.executeAsync();
+                //Access Token To Manage Logout
+                accessTokenTracker = new AccessTokenTracker() {
+                    @Override
+                    protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+                        if (currentAccessToken == null) {
+                            SharedPrefFacebook.getInstance(userSignIn.this).deleteFB();
+                        }
+                    }
+                };
+
+
 
             }
 
@@ -217,7 +271,7 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
     private void handleRequest(GoogleSignInResult result) {
         Toast.makeText(this, "Google1", Toast.LENGTH_SHORT).show();
         if (result.isSuccess()) {
-            Toast.makeText(this, "Google2", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Welcome To Homepage", Toast.LENGTH_SHORT).show();
             GoogleSignInAccount signInAccount = result.getSignInAccount();
             String name = signInAccount.getDisplayName();
             String email = signInAccount.getEmail();
@@ -229,7 +283,7 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
             editor.putString("Email",email);
             editor.putString("Img_Url",img_url);
             editor.apply();
-            Toast.makeText(this, "Google3", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Home Page", Toast.LENGTH_SHORT).show();
 
             startActivity(new Intent(this,MainPage.class));
         }
@@ -256,8 +310,6 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
 
         if (requestCode == REQ_CODE) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            int statusCode = result.getStatus().getStatusCode();
-
             handleRequest(result);
         }
         else{
@@ -277,12 +329,6 @@ public class userSignIn extends AppCompatActivity implements View.OnClickListene
         }
         return false;
     }
-    public void callfrag(){
-        Fragment fragment = new wish_list();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.scrollView1,fragment);
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-    }
+
 
 }

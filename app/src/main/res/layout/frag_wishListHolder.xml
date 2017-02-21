@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sharma.wishlist.frag_wishListHolder">
+    tools:context="com.example.sharma.wishlist.frag_wishlistholder">
     <fragment
         android:id="@+id/fragment_holder"
         android:layout_width="match_parent"

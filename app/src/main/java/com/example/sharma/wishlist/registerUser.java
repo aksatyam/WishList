@@ -82,7 +82,7 @@ public class registerUser extends AppCompatActivity {
                         if (response.equals("success")) {
                             loading.dismiss();
                             Toast.makeText(getApplicationContext(), "User Registration Success....", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getApplicationContext(), userSignIn.class);
+                            Intent intent = new Intent(getApplicationContext(), MainPage.class);
                             startActivity(intent);
                         } else {
                             loading.dismiss();

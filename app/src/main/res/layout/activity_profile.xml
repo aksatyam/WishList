@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="76dp"
-                android:text="vishal sharma"
+                android:text="User Name"
                 android:textColor="#fff"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -101,7 +101,7 @@
                 android:layout_below="@+id/user_profile_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:text="vishalsharma01911@gmail.com"
+                android:text="example@gmail.com"
                 android:textColor="#fff"
                 android:textSize="14sp" />
 

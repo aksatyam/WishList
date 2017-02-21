@@ -17,36 +17,31 @@
         <activity
             android:name=".MainPage"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".registerUser"
-            android:label="Registration Page"></activity>
-        <activity
-            android:name=".userSignIn"
-            android:label="Login Page">
+            android:label="Registration Page" />
+        <activity android:name=".userSignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".frag_wishListHolder" />
-        <activity android:name=".Splash_screen"></activity>
-        <!--
- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
+        <activity android:name=".frag_wishlistholder" />
+        <activity android:name=".Splash_screen" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".replyWishList">
+        <activity android:name=".replyWishList" />
+        <activity android:name=".Profile" />
+        <activity android:name=".wish_List" />
+        <activity android:name=".questions"></activity>
+        <activity android:name=".FriendList">
 
         </activity>
-        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>

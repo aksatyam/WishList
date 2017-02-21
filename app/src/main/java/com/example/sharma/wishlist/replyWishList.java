@@ -31,7 +31,7 @@ public class replyWishList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reply_wishList);
+        setContentView(R.layout.activity_reply_wishlist);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -62,7 +62,7 @@ public class replyWishList extends AppCompatActivity {
                         Log.d("shashi_message",response);
                         if (response.equals("success")) {
                             Toast.makeText(getApplicationContext(), "Reply Inserted:" + response, Toast.LENGTH_LONG).show();
-                           /* Intent intent = new Intent(getApplicationContext(), display_Wish.xml.class);
+                           /* Intent intent = new Intent(getApplicationContext(), display_wish.xml.class);
                             startActivity(intent);*/
 
                         } else {

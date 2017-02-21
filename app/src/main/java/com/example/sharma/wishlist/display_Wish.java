@@ -47,7 +47,7 @@ public class display_Wish extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.display_Wish, container, false);
+        View view= inflater.inflate(R.layout.display_wish, container, false);
       bundle = new Bundle();
        var_listview = (ListView)view.findViewById(R.id.wish_list);
         list = new ArrayList<>();
@@ -108,12 +108,6 @@ public class display_Wish extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String data = list.get(position);
                 bundle.putString("wish",data);
-                /*Fragment ff=new Reply();
-                FragmentManager fragmentManager=getFragmentManager();
-                ff.setArguments(bundle);
-                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.frag_wishListHolder,ff);
-                fragmentTransaction.commit();*/
                 Intent i = new Intent(getActivity(),replyWishList.class);
                 i.putExtra("message", data);
                 startActivity(i);

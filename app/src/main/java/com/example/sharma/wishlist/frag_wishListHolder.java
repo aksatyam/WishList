@@ -6,12 +6,13 @@ import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class frag_wishListHolder extends AppCompatActivity {
+public class frag_wishlistholder extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frag_wishListHolder);
+        setContentView(R.layout.frag_wishlistholder);
+
         Fragment fragment = new display_Wish();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
