@@ -21,19 +21,17 @@
         <activity
             android:name=".registerUser"
             android:label="Registration Page" />
-        <activity android:name=".userSignIn">
+        <activity android:name=".userSignIn"></activity>
+        <activity android:name=".frag_wishlistholder" />
+        <activity android:name=".Splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".frag_wishlistholder" />
-        <activity android:name=".Splash_screen" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
         <activity android:name=".replyWishList" />
         <activity android:name=".Profile" />
